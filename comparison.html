@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Pascal Jewelry</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="/CSS/comparison.css">
+</head>
+
+<body>
+  <!-- Top Bar -->
+  <div class="container-fluid" style="background-color: black; color: white;">
+    <div class="row">
+      <div class="col-sm-4 text-center">
+        <p class="mb-0 py-2" style="font-size: 1rem;"><i class="bi bi-phone"></i> <span>+923355562218</span></p>
+      </div>
+      <div class="col-sm-4 text-center">
+        <p class="mb-0 py-2" style="font-size: 1rem;">Save up 30% off on jewellery</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Logo -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 bg-white">
+        <div class="text-center my-4">
+          <img src="IMAGES/PASCAL.png" alt="Pascal Logo" class="img-fluid" style="max-width: 500px; height: auto;">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg" style="background-color: #ffffff; border: 0.5px solid #e0e0e0;">
+    <div class="container justify-content-between">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="categories.html">Categories</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="comparison.html">Comparison</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="feedback.html">Feedback</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="gallery.html">Gallery</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="d-flex align-items-center">
+        <div class="nav-item me-3" onclick="openSearch()" style="cursor: pointer;">
+          <i class="bi bi-search" style="font-size: 1.2rem;"></i>
+        </div>
+        <div class="nav-item me-3">
+          <i class="bi bi-person" style="font-size: 1.2rem;"></i>
+        </div>
+        <div class="nav-item" onclick="openCart()" style="cursor: pointer;">
+          <i class="bi bi-bag" style="font-size: 1.2rem;"></i>
+          <span class="cart-badge" id="cartBadge">0</span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+<!-- Comparison Hero Section -->
+<div class="container-fluid py-5" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);">
+  <div class="container text-center">
+    <h1 class="display-4 fw-bold mb-3">Compare Jewelry</h1>
+    <p class="lead text-muted" style="font-size: 1.1rem;">Find the perfect piece by comparing features, prices, and styles</p>
+  </div>
+</div>
+
+<!-- Comparison Section -->
+<div class="container my-5">
+  <div class="row mb-4">
+    <div class="col-12 text-center">
+      <h2 class="fw-bold mb-3" style="font-size: 1.8rem;">Product Comparison</h2>
+      <p class="text-muted" style="font-size: 1rem;">Compare up to three products to make the best choice</p>
+    </div>
+  </div>
+
+  <!-- Comparison Table -->
+  <div class="table-responsive">
+    <table class="table table-bordered align-middle" style="border-radius: 10px; overflow: hidden;">
+      <thead style="background-color: #f8f9fa;">
+        <tr>
+          <th scope="col" class="text-center" style="width: 20%; font-size: 1.1rem; padding: 20px;">Features</th>
+          <th scope="col" class="text-center" style="width: 26.67%; font-size: 1.1rem; padding: 20px;">Elegant Diamond Bangles</th>
+          <th scope="col" class="text-center" style="width: 26.67%; font-size: 1.1rem; padding: 20px;">Regal Diamond Set</th>
+          <th scope="col" class="text-center" style="width: 26.67%; font-size: 1.1rem; padding: 20px;">Diamond Bracelets</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="text-center" style="background-color: #f8f9fa; font-weight: 600; padding: 15px;">Product Image</td>
+          <td class="text-center" style="padding: 15px;">
+            <img src="IMAGES/Bangles.PNG" alt="Elegant Bangles" class="img-fluid" style="max-width: 150px; border-radius: 10px;">
+          </td>
+          <td class="text-center" style="padding: 15px;">
+            <img src="IMAGES/Necklace.jpg" alt="Diamond Set" class="img-fluid" style="max-width: 150px; border-radius: 10px;">
+          </td>
+          <td class="text-center" style="padding: 15px;">
+            <img src="IMAGES/Bracelets.webp" alt="Bracelets" class="img-fluid" style="max-width: 150px; border-radius: 10px;">
+          </td>
+        </tr>
+        <tr>
+          <td class="text-center" style="background-color: #f8f9fa; font-weight: 600; padding: 15px;">Price</td>
+          <td class="text-center" style="padding: 15px; font-size: 1.2rem; font-weight: 600; color: #2c3e50;">$1,250</td>
+          <td class="text-center" style="padding: 15px; font-size: 1.2rem; font-weight: 600; color: #2c3e50;">$2,450</td>
+          <td class="text-center" style="padding: 15px; font-size: 1.2rem; font-weight: 600; color: #2c3e50;">$1,350</td>
+        </tr>
+        <tr>
+          <td class="text-center" style="background-color: #f8f9fa; font-weight: 600; padding: 15px;">Material</td>
+          <td class="text-center" style="padding: 15px;">White Gold</td>
+          <td class="text-center" style="padding: 15px;">White Gold & Platinum</td>
+          <td class="text-center" style="padding: 15px;">White Gold</td>
+        </tr>
+        <tr>
+          <td class="text-center" style="background-color: #f8f9fa; font-weight: 600; padding: 15px;">Gemstones</td>
+          <td class="text-center" style="padding: 15px;">Premium Diamonds</td>
+          <td class="text-center" style="padding: 15px;">Premium Diamonds</td>
+          <td class="text-center" style="padding: 15px;">Premium Diamonds</td>
+        </tr>
+        <tr>
+          <td class="text-center" style="background-color: #f8f9fa; font-weight: 600; padding: 15px;">Type</td>
+          <td class="text-center" style="padding: 15px;">Bangles (Pair)</td>
+          <td class="text-center" style="padding: 15px;">Necklace & Earrings Set</td>
+          <td class="text-center" style="padding: 15px;">Bracelet</td>
+        </tr>
+        <tr>
+          <td class="text-center" style="background-color: #f8f9fa; font-weight: 600; padding: 15px;">Occasion</td>
+          <td class="text-center" style="padding: 15px;">Daily Wear, Parties</td>
+          <td class="text-center" style="padding: 15px;">Weddings, Grand Events</td>
+          <td class="text-center" style="padding: 15px;">Daily Wear, Casual Events</td>
+        </tr>
+        <tr>
+          <td class="text-center" style="background-color: #f8f9fa; font-weight: 600; padding: 15px;">Weight</td>
+          <td class="text-center" style="padding: 15px;">25g (approx.)</td>
+          <td class="text-center" style="padding: 15px;">45g (approx.)</td>
+          <td class="text-center" style="padding: 15px;">18g (approx.)</td>
+        </tr>
+        <tr>
+          <td class="text-center" style="background-color: #f8f9fa; font-weight: 600; padding: 15px;">Style</td>
+          <td class="text-center" style="padding: 15px;">Traditional & Modern</td>
+          <td class="text-center" style="padding: 15px;">Regal & Elegant</td>
+          <td class="text-center" style="padding: 15px;">Contemporary</td>
+        </tr>
+        <tr>
+          <td class="text-center" style="background-color: #f8f9fa; font-weight: 600; padding: 15px;">Warranty</td>
+          <td class="text-center" style="padding: 15px;"><i class="bi bi-check-circle-fill text-success"></i> 1 Year</td>
+          <td class="text-center" style="padding: 15px;"><i class="bi bi-check-circle-fill text-success"></i> 2 Years</td>
+          <td class="text-center" style="padding: 15px;"><i class="bi bi-check-circle-fill text-success"></i> 1 Year</td>
+        </tr>
+        <tr>
+          <td class="text-center" style="background-color: #f8f9fa; font-weight: 600; padding: 15px;">Availability</td>
+          <td class="text-center" style="padding: 15px;"><span class="badge bg-success" style="font-size: 0.9rem;">In Stock</span></td>
+          <td class="text-center" style="padding: 15px;"><span class="badge bg-success" style="font-size: 0.9rem;">In Stock</span></td>
+          <td class="text-center" style="padding: 15px;"><span class="badge bg-success" style="font-size: 0.9rem;">In Stock</span></td>
+        </tr>
+        <tr>
+          <td class="text-center" style="background-color: #f8f9fa; font-weight: 600; padding: 15px;">Action</td>
+          <td class="text-center" style="padding: 15px;">
+            <button class="btn btn-dark btn-sm px-4" onclick="addToCart('Elegant Diamond Bangles', 1250, 'IMAGES/Bangles.PNG')" style="border-radius: 20px;">Add to Cart</button>
+          </td>
+          <td class="text-center" style="padding: 15px;">
+            <button class="btn btn-dark btn-sm px-4" onclick="addToCart('Regal Diamond Set', 2450, 'IMAGES/Necklace.jpg')" style="border-radius: 20px;">Add to Cart</button>
+          </td>
+          <td class="text-center" style="padding: 15px;">
+            <button class="btn btn-dark btn-sm px-4" onclick="addToCart('Diamond Bracelets', 1350, 'IMAGES/Bracelets.webp')" style="border-radius: 20px;">Add to Cart</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- Why Compare Section -->
+<div class="container-fluid py-5 my-5" style="background-color: #f8f9fa;">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-12 mb-4">
+        <h2 class="fw-bold" style="font-size: 1.8rem;">Why Compare with Pascal?</h2>
+        <p class="text-muted" style="font-size: 1rem;">Make informed decisions with our detailed comparison features</p>
+      </div>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4" data-aos="fade-up" data-aos-duration="800">
+        <div class="text-center p-4">
+          <div class="mb-3">
+            <i class="bi bi-gem" style="font-size: 3rem; color: #2c3e50;"></i>
+          </div>
+          <h5 class="fw-bold mb-3" style="font-size: 1.2rem;">Quality Assurance</h5>
+          <p class="text-muted" style="font-size: 0.95rem;">All our products are crafted with premium materials and undergo strict quality checks</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+        <div class="text-center p-4">
+          <div class="mb-3">
+            <i class="bi bi-shield-check" style="font-size: 3rem; color: #2c3e50;"></i>
+          </div>
+          <h5 class="fw-bold mb-3" style="font-size: 1.2rem;">Warranty Protection</h5>
+          <p class="text-muted" style="font-size: 0.95rem;">Enjoy peace of mind with our comprehensive warranty coverage on all jewelry pieces</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+        <div class="text-center p-4">
+          <div class="mb-3">
+            <i class="bi bi-truck" style="font-size: 3rem; color: #2c3e50;"></i>
+          </div>
+          <h5 class="fw-bold mb-3" style="font-size: 1.2rem;">Free Shipping</h5>
+          <p class="text-muted" style="font-size: 0.95rem;">Get free shipping on all orders with secure packaging and timely delivery</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Call to Action -->
+<div class="container my-5 text-center">
+  <h3 class="fw-bold mb-3" style="font-size: 1.6rem;">Still Need Help Choosing?</h3>
+  <p class="text-muted mb-4" style="font-size: 1rem;">Our jewelry experts are here to assist you</p>
+  <a href="categories.html" class="btn btn-dark px-5 py-3 me-3" style="border-radius: 25px; font-size: 1rem;">Browse All Products</a>
+  <a href="feedback.html" class="btn btn-outline-dark px-5 py-3" style="border-radius: 25px; font-size: 1rem;">Contact Us</a>
+</div>
+
+<!-- Offcanvas Cart -->
+
+  <!-- Search Modal -->
+  <div class="search-modal" id="searchModal">
+    <div class="search-content">
+      <button class="search-close" onclick="closeSearch()">&times;</button>
+      <h4 class="mb-4" style="font-size: 1.5rem;">Search Products</h4>
+      <div class="search-input-wrapper">
+        <input type="text" class="search-input" id="searchInput" placeholder="Search for jewelry..." autocomplete="off">
+        <i class="bi bi-search search-icon"></i>
+      </div>
+      <div class="search-results" id="searchResults"></div>
+    </div>
+  </div>
+
+  
+
+  <!-- Offcanvas Cart -->
+  <div class="offcanvas offcanvas-end offcanvas-cart" tabindex="-1" id="cartOffcanvas" aria-labelledby="cartOffcanvasLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="cartOffcanvasLabel" style="font-size: 1.4rem;">Shopping Cart</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div id="cartItems"></div>
+      <div class="cart-total" id="cartTotal" style="display: none;">
+        <div class="d-flex justify-content-between mb-2">
+          <span>Subtotal:</span>
+          <span class="fw-bold" id="subtotalAmount">$0</span>
+        </div>
+        <div class="d-flex justify-content-between mb-2">
+          <span>Shipping:</span>
+          <span class="fw-bold">Free</span>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between">
+          <span class="fw-bold">Total:</span>
+          <span class="fw-bold" id="totalAmount">$0</span>
+        </div>
+        <button class="checkout-btn">Proceed to Checkout</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-white text-dark border-top mt-5 pt-4 pb-2">
+    <div class="container">
+      <div class="row text-center text-md-start">
+        <div class="col-md-4 mb-4">
+          <h5 class="fw-bold" style="font-size: 1.3rem;">Pascal</h5>
+          <p class="mb-2" style="font-size: 1.05rem;">Elegance redefined.</p>
+          <div>
+            <a href="#" class="text-dark me-3"><i class="bi bi-instagram" style="font-size: 1.3rem;"></i></a>
+            <a href="#" class="text-dark me-3"><i class="bi bi-facebook" style="font-size: 1.3rem;"></i></a>
+            <a href="#" class="text-dark me-3"><i class="bi bi-whatsapp" style="font-size: 1.3rem;"></i></a>
+            <a href="#" class="text-dark"><i class="bi bi-pinterest" style="font-size: 1.3rem;"></i></a>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <h6 class="fw-bold" style="font-size: 1.15rem;">Quick Links</h6>
+          <ul class="list-unstyled" style="font-size: 1.05rem;">
+            <li><a href="index.html" class="text-dark text-decoration-none">Home</a></li>
+            <li><a href="categories.html" class="text-dark text-decoration-none">Categories</a></li>
+            <li><a href="comparison.html" class="text-dark text-decoration-none">Comparison</a></li>
+            <li><a href="gallery.html" class="text-dark text-decoration-none">Gallery</a></li>
+            <li><a href="contact.html" class="text-dark text-decoration-none">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-4">
+          <h6 class="fw-bold" style="font-size: 1.15rem;">Contact Us</h6>
+          <p class="mb-1" style="font-size: 1.05rem;"><i class="bi bi-whatsapp"></i> +92 335 5562218</p>
+          <p class="mb-1" style="font-size: 1.05rem;"><i class="bi bi-envelope"></i> pascaljewels@gmail.com</p>
+          <p style="font-size: 1.05rem;"><i class="bi bi-geo-alt"></i> Karachi, Pakistan</p>
+        </div>
+      </div>
+      <div class="text-center border-top pt-3" style="font-size: 15px;">
+        &copy; 2025 Pascal Imitation Jewellery. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

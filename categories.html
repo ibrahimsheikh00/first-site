@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Categories - Pascal Jewelry</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/CSS/categories.css">
+</head>
+
+<body>
+  <!-- Top Bar -->
+  <div class="container-fluid" style="background-color: black; color: white;">
+    <div class="row">
+      <div class="col-sm-4 text-center">
+        <p class="mb-0 py-2" style="font-size: 1rem;"><i class="bi bi-phone"></i> <span>+923355562218</span></p>
+      </div>
+      <div class="col-sm-4 text-center">
+        <p class="mb-0 py-2" style="font-size: 1rem;">Save up 30% off on jewellery</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Logo -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 bg-white">
+        <div class="text-center my-4">
+          <img src="IMAGES/PASCAL.png" alt="Pascal Logo" class="img-fluid" style="max-width: 500px; height: auto;">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg" style="background-color: #ffffff; border: 0.5px solid #e0e0e0;">
+    <div class="container justify-content-between">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="categories.html">Categories</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="comparison.html">Comparison</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="feedback.html">Feedback</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="gallery.html">Gallery</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="d-flex align-items-center">
+        <div class="nav-item me-3" onclick="openSearch()" style="cursor: pointer;">
+          <i class="bi bi-search" style="font-size: 1.2rem;"></i>
+        </div>
+        <div class="nav-item me-3">
+          <i class="bi bi-person" style="font-size: 1.2rem;"></i>
+        </div>
+        <div class="nav-item" onclick="openCart()" style="cursor: pointer;">
+          <i class="bi bi-bag" style="font-size: 1.2rem;"></i>
+          <span class="cart-badge" id="cartBadge">0</span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  
+
+  <!-- Search Modal -->
+  <div class="search-modal" id="searchModal">
+    <div class="search-content">
+      <button class="search-close" onclick="closeSearch()">&times;</button>
+      <h4 class="mb-4" style="font-size: 1.5rem;">Search Products</h4>
+      <div class="search-input-wrapper">
+        <input type="text" class="search-input" id="searchInput" placeholder="Search for jewelry..." autocomplete="off">
+        <i class="bi bi-search search-icon"></i>
+      </div>
+      <div class="search-results" id="searchResults"></div>
+    </div>
+  </div>
+
+  <!-- Products -->
+  <div class="container my-5">
+    <h2 class="text-center mb-5" style="font-size: 2rem;">Our Collection</h2>
+    <div class="row g-4" id="productsContainer">
+      <!-- Product 1 -->
+      <div class="col-lg-4 col-md-6 product-item" data-name="Elegant Diamond Bangles" data-price="1250">
+        <div class="product-card">
+          <div class="product-image">
+            <img src="IMAGES/Bangles.PNG" alt="Elegant Bangles">
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">Elegant Diamond Bangles</h3>
+            <p class="product-description">Crafted with precision and passion, these white gold bangles shimmer with a constellation of diamonds. A timeless statement piece that blends tradition with modern elegance.</p>
+            <div class="product-footer">
+              <span class="product-price">$1,250</span>
+              <button class="product-button" onclick="addToCart('Elegant Diamond Bangles', 1250, 'IMAGES/Bangles.PNG')">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="col-lg-4 col-md-6 product-item" data-name="Islamic Calligraphy" data-price="1150">
+        <div class="product-card">
+          <div class="product-image">
+            <img src="IMAGES/Calligraphy.webp" alt="Islamic Calligraphy">
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">Islamic Calligraphy</h3>
+            <p class="product-description">A curated selection of diamond bangles, rings, and necklaces—each piece radiating sophistication and charm. Designed to elevate your style with effortless grace.</p>
+            <div class="product-footer">
+              <span class="product-price">$1,150</span>
+              <button class="product-button" onclick="addToCart('Islamic Calligraphy', 1150, 'IMAGES/Calligraphy.webp')">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="col-lg-4 col-md-6 product-item" data-name="Regal Diamond Set" data-price="2450">
+        <div class="product-card">
+          <div class="product-image">
+            <img src="IMAGES/Necklace.jpg" alt="Regal Diamond Set">
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">Regal Diamond Set</h3>
+            <p class="product-description">A stunning necklace and earrings duo, crafted to perfection. The intricate detailing and radiant diamonds make this set a showstopper for grand occasions.</p>
+            <div class="product-footer">
+              <span class="product-price">$2,450</span>
+              <button class="product-button" onclick="addToCart('Regal Diamond Set', 2450, 'IMAGES/Necklace.jpg')">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="col-lg-4 col-md-6 product-item" data-name="Midnight Elegance Set" data-price="1850">
+        <div class="product-card">
+          <div class="product-image">
+            <img src="IMAGES/Nose Rings.webp" alt="Midnight Elegance Set">
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">Midnight Elegance Set</h3>
+            <p class="product-description">A captivating blend of white gold and diamonds, this necklace and bangle duo exudes sophistication. Set against a deep black canvas, each piece glows with timeless charm.</p>
+            <div class="product-footer">
+              <span class="product-price">$1,850</span>
+              <button class="product-button" onclick="addToCart('Midnight Elegance Set', 1850, 'IMAGES/Nose Rings.webp')">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 5 -->
+      <div class="col-lg-4 col-md-6 product-item" data-name="Graceful Steps Bangles" data-price="980">
+        <div class="product-card">
+          <div class="product-image">
+            <img src="IMAGES/Anklets.webp" alt="Graceful Steps Bangles">
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">Graceful Steps Bangles</h3>
+            <p class="product-description">Adorn your every step with these radiant diamond bangles. Designed to complement traditional and modern attire alike, they bring a touch of sparkle to your stride.</p>
+            <div class="product-footer">
+              <span class="product-price">$980</span>
+              <button class="product-button" onclick="addToCart('Graceful Steps Bangles', 980, 'IMAGES/Anklets.webp')">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 6 -->
+      <div class="col-lg-4 col-md-6 product-item" data-name="Diamond Bracelets" data-price="1350">
+        <div class="product-card">
+          <div class="product-image">
+            <img src="IMAGES/Bracelets.webp" alt="Bracelets">
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">Diamond Bracelets</h3>
+            <p class="product-description">These white gold bangles, worn with effortless grace, are a celebration of elegance. Their intricate lattice of diamonds catches the light with every movement.</p>
+            <div class="product-footer">
+              <span class="product-price">$1,350</span>
+              <button class="product-button" onclick="addToCart('Diamond Bracelets', 1350, 'IMAGES/Bracelets.webp')">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Offcanvas Cart -->
+  <div class="offcanvas offcanvas-end offcanvas-cart" tabindex="-1" id="cartOffcanvas" aria-labelledby="cartOffcanvasLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="cartOffcanvasLabel" style="font-size: 1.4rem;">Shopping Cart</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div id="cartItems"></div>
+      <div class="cart-total" id="cartTotal" style="display: none;">
+        <div class="d-flex justify-content-between mb-2">
+          <span>Subtotal:</span>
+          <span class="fw-bold" id="subtotalAmount">$0</span>
+        </div>
+        <div class="d-flex justify-content-between mb-2">
+          <span>Shipping:</span>
+          <span class="fw-bold">Free</span>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between">
+          <span class="fw-bold">Total:</span>
+          <span class="fw-bold" id="totalAmount">$0</span>
+        </div>
+        <button class="checkout-btn">Proceed to Checkout</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-white text-dark border-top mt-5 pt-4 pb-2">
+    <div class="container">
+      <div class="row text-center text-md-start">
+        <div class="col-md-4 mb-4">
+          <h5 class="fw-bold" style="font-size: 1.3rem;">Pascal</h5>
+          <p class="mb-2" style="font-size: 1.05rem;">Elegance redefined.</p>
+          <div>
+            <a href="#" class="text-dark me-3"><i class="bi bi-instagram" style="font-size: 1.3rem;"></i></a>
+            <a href="#" class="text-dark me-3"><i class="bi bi-facebook" style="font-size: 1.3rem;"></i></a>
+            <a href="#" class="text-dark me-3"><i class="bi bi-whatsapp" style="font-size: 1.3rem;"></i></a>
+            <a href="#" class="text-dark"><i class="bi bi-pinterest" style="font-size: 1.3rem;"></i></a>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <h6 class="fw-bold" style="font-size: 1.15rem;">Quick Links</h6>
+          <ul class="list-unstyled" style="font-size: 1.05rem;">
+            <li><a href="index.html" class="text-dark text-decoration-none">Home</a></li>
+            <li><a href="categories.html" class="text-dark text-decoration-none">Categories</a></li>
+            <li><a href="comparison.html" class="text-dark text-decoration-none">Comparison</a></li>
+            <li><a href="gallery.html" class="text-dark text-decoration-none">Gallery</a></li>
+            <li><a href="contact.html" class="text-dark text-decoration-none">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-4">
+          <h6 class="fw-bold" style="font-size: 1.15rem;">Contact Us</h6>
+          <p class="mb-1" style="font-size: 1.05rem;"><i class="bi bi-whatsapp"></i> +92 335 5562218</p>
+          <p class="mb-1" style="font-size: 1.05rem;"><i class="bi bi-envelope"></i> pascaljewels@gmail.com</p>
+          <p style="font-size: 1.05rem;"><i class="bi bi-geo-alt"></i> Karachi, Pakistan</p>
+        </div>
+      </div>
+      <div class="text-center border-top pt-3" style="font-size: 15px;">
+        &copy; 2025 Pascal Imitation Jewellery. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

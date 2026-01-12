@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery - Pascal Jewelry</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/CSS/gallery.css">
+  <style>
+  </style>
+</head>
+
+<body>
+  <!-- Top Bar -->
+  <div class="container-fluid" style="background-color: black; color: white;">
+    <div class="row">
+      <div class="col-sm-4 text-center">
+        <p class="mb-0 py-2" style="font-size: 1rem;"><i class="bi bi-phone"></i> <span>+923355562218</span></p>
+      </div>
+      <div class="col-sm-4 text-center">
+        <p class="mb-0 py-2" style="font-size: 1rem;">Save up 30% off on jewellery</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Logo -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 bg-white">
+        <div class="text-center my-4">
+          <img src="IMAGES/PASCAL.png" alt="Pascal Logo" class="img-fluid" style="max-width: 500px; height: auto;">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg" style="background-color: #ffffff; border: 0.5px solid #e0e0e0;">
+    <div class="container justify-content-between">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="categories.html">Categories</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="comparison.html">Comparison</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="feedback.html">Feedback</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="gallery.html">Gallery</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="d-flex align-items-center">
+        <div class="nav-item me-3" onclick="openSearch()" style="cursor: pointer;">
+          <i class="bi bi-search" style="font-size: 1.2rem;"></i>
+        </div>
+        <div class="nav-item me-3">
+          <i class="bi bi-person" style="font-size: 1.2rem;"></i>
+        </div>
+        <div class="nav-item" onclick="openCart()" style="cursor: pointer;">
+          <i class="bi bi-bag" style="font-size: 1.2rem;"></i>
+          <span class="cart-badge" id="cartBadge">0</span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+<!-- Gallery Hero Section -->
+<div class="container-fluid py-5" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);">
+  <div class="container text-center">
+    <h1 class="display-4 fw-bold mb-3">Our Gallery</h1>
+    <p class="lead text-muted" style="font-size: 1.1rem;">Explore our exquisite collection of timeless jewelry pieces</p>
+  </div>
+</div>
+
+<!-- Gallery Grid -->
+<div class="container my-5">
+  <div class="row g-4">
+    <!-- Gallery Item 1 -->
+    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="800">
+      <div class="card border-0 shadow-sm h-100" style="overflow: hidden; border-radius: 15px;">
+        <img src="IMAGES/Bangles.PNG" class="card-img-top" alt="Diamond Bangles" style="height: 300px; object-fit: cover; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        <div class="card-body text-center">
+          <h5 class="card-title fw-bold" style="font-size: 1.2rem;">Diamond Bangles</h5>
+          <p class="card-text text-muted" style="font-size: 0.95rem;">Exquisite white gold bangles adorned with sparkling diamonds</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gallery Item 2 -->
+    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+      <div class="card border-0 shadow-sm h-100" style="overflow: hidden; border-radius: 15px;">
+        <img src="IMAGES/Calligraphy.webp" class="card-img-top" alt="Islamic Calligraphy" style="height: 300px; object-fit: cover; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        <div class="card-body text-center">
+          <h5 class="card-title fw-bold" style="font-size: 1.2rem;">Calligraphy Collection</h5>
+          <p class="card-text text-muted" style="font-size: 0.95rem;">Elegant pieces featuring intricate Islamic calligraphy designs</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gallery Item 3 -->
+    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+      <div class="card border-0 shadow-sm h-100" style="overflow: hidden; border-radius: 15px;">
+        <img src="IMAGES/Necklace.jpg" class="card-img-top" alt="Diamond Necklace Set" style="height: 300px; object-fit: cover; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        <div class="card-body text-center">
+          <h5 class="card-title fw-bold" style="font-size: 1.2rem;">Regal Necklace Sets</h5>
+          <p class="card-text text-muted" style="font-size: 0.95rem;">Stunning necklace and earring combinations for special occasions</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gallery Item 4 -->
+    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+      <div class="card border-0 shadow-sm h-100" style="overflow: hidden; border-radius: 15px;">
+        <img src="IMAGES/Nose Rings.webp" class="card-img-top" alt="Elegant Jewelry Set" style="height: 300px; object-fit: cover; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        <div class="card-body text-center">
+          <h5 class="card-title fw-bold" style="font-size: 1.2rem;">Midnight Elegance</h5>
+          <p class="card-text text-muted" style="font-size: 0.95rem;">Captivating white gold pieces with a sophisticated allure</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gallery Item 5 -->
+    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+      <div class="card border-0 shadow-sm h-100" style="overflow: hidden; border-radius: 15px;">
+        <img src="IMAGES/Anklets.webp" class="card-img-top" alt="Anklets Collection" style="height: 300px; object-fit: cover; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        <div class="card-body text-center">
+          <h5 class="card-title fw-bold" style="font-size: 1.2rem;">Graceful Anklets</h5>
+          <p class="card-text text-muted" style="font-size: 0.95rem;">Delicate diamond anklets that add sparkle to every step</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gallery Item 6 -->
+    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
+      <div class="card border-0 shadow-sm h-100" style="overflow: hidden; border-radius: 15px;">
+        <img src="IMAGES/Bracelets.webp" class="card-img-top" alt="Diamond Bracelets" style="height: 300px; object-fit: cover; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        <div class="card-body text-center">
+          <h5 class="card-title fw-bold" style="font-size: 1.2rem;">Luxury Bracelets</h5>
+          <p class="card-text text-muted" style="font-size: 0.95rem;">Premium white gold bracelets with intricate diamond detailing</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Call to Action Section -->
+<div class="container-fluid py-5 my-5" style="background-color: #f8f9fa;">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-3" style="font-size: 2rem;">Discover Your Perfect Piece</h2>
+    <p class="text-muted mb-4" style="font-size: 1.1rem;">Visit our showroom or browse our complete collection online</p>
+    <a href="categories.html" class="btn btn-dark px-5 py-3" style="border-radius: 25px; font-size: 1rem;">View All Products</a>
+  </div>
+</div>
+
+<!-- Offcanvas Cart -->
+
+  <!-- Search Modal -->
+  <div class="search-modal" id="searchModal">
+    <div class="search-content">
+      <button class="search-close" onclick="closeSearch()">&times;</button>
+      <h4 class="mb-4" style="font-size: 1.5rem;">Search Products</h4>
+      <div class="search-input-wrapper">
+        <input type="text" class="search-input" id="searchInput" placeholder="Search for jewelry..." autocomplete="off">
+        <i class="bi bi-search search-icon"></i>
+      </div>
+      <div class="search-results" id="searchResults"></div>
+    </div>
+  </div>
+
+  
+
+  <!-- Offcanvas Cart -->
+  <div class="offcanvas offcanvas-end offcanvas-cart" tabindex="-1" id="cartOffcanvas" aria-labelledby="cartOffcanvasLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="cartOffcanvasLabel" style="font-size: 1.4rem;">Shopping Cart</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div id="cartItems"></div>
+      <div class="cart-total" id="cartTotal" style="display: none;">
+        <div class="d-flex justify-content-between mb-2">
+          <span>Subtotal:</span>
+          <span class="fw-bold" id="subtotalAmount">$0</span>
+        </div>
+        <div class="d-flex justify-content-between mb-2">
+          <span>Shipping:</span>
+          <span class="fw-bold">Free</span>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between">
+          <span class="fw-bold">Total:</span>
+          <span class="fw-bold" id="totalAmount">$0</span>
+        </div>
+        <button class="checkout-btn">Proceed to Checkout</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-white text-dark border-top mt-5 pt-4 pb-2">
+    <div class="container">
+      <div class="row text-center text-md-start">
+        <div class="col-md-4 mb-4">
+          <h5 class="fw-bold" style="font-size: 1.3rem;">Pascal</h5>
+          <p class="mb-2" style="font-size: 1.05rem;">Elegance redefined.</p>
+          <div>
+            <a href="#" class="text-dark me-3"><i class="bi bi-instagram" style="font-size: 1.3rem;"></i></a>
+            <a href="#" class="text-dark me-3"><i class="bi bi-facebook" style="font-size: 1.3rem;"></i></a>
+            <a href="#" class="text-dark me-3"><i class="bi bi-whatsapp" style="font-size: 1.3rem;"></i></a>
+            <a href="#" class="text-dark"><i class="bi bi-pinterest" style="font-size: 1.3rem;"></i></a>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <h6 class="fw-bold" style="font-size: 1.15rem;">Quick Links</h6>
+          <ul class="list-unstyled" style="font-size: 1.05rem;">
+            <li><a href="index.html" class="text-dark text-decoration-none">Home</a></li>
+            <li><a href="categories.html" class="text-dark text-decoration-none">Categories</a></li>
+            <li><a href="comparison.html" class="text-dark text-decoration-none">Comparison</a></li>
+            <li><a href="gallery.html" class="text-dark text-decoration-none">Gallery</a></li>
+            <li><a href="contact.html" class="text-dark text-decoration-none">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-4">
+          <h6 class="fw-bold" style="font-size: 1.15rem;">Contact Us</h6>
+          <p class="mb-1" style="font-size: 1.05rem;"><i class="bi bi-whatsapp"></i> +92 335 5562218</p>
+          <p class="mb-1" style="font-size: 1.05rem;"><i class="bi bi-envelope"></i> pascaljewels@gmail.com</p>
+          <p style="font-size: 1.05rem;"><i class="bi bi-geo-alt"></i> Karachi, Pakistan</p>
+        </div>
+      </div>
+      <div class="text-center border-top pt-3" style="font-size: 15px;">
+        &copy; 2025 Pascal Imitation Jewellery. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

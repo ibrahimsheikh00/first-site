@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Categories - Pascal Jewelry</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.32/dist/sweetalert2.min.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="/CSS/feedback.css">
+  <style>
+  </style>
+</head>
+
+<body>
+  <!-- Top Bar -->
+  <div class="container-fluid" style="background-color: black; color: white;">
+    <div class="row">
+      <div class="col-sm-4 text-center">
+        <p class="mb-0 py-2" style="font-size: 1rem;"><i class="bi bi-phone"></i> <span>+923355562218</span></p>
+      </div>
+      <div class="col-sm-4 text-center">
+        <p class="mb-0 py-2" style="font-size: 1rem;">Save up 30% off on jewellery</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Logo -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 bg-white">
+        <div class="text-center my-4">
+          <img src="IMAGES/PASCAL.png" alt="Pascal Logo" class="img-fluid" style="max-width: 500px; height: auto;">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg" style="background-color: #ffffff; border: 0.5px solid #e0e0e0;">
+    <div class="container justify-content-between">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="categories.html">Categories</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="comparison.html">Comparison</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="feedback.html">Feedback</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="gallery.html">Gallery</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="d-flex align-items-center">
+        <div class="nav-item me-3" onclick="openSearch()" style="cursor: pointer;">
+          <i class="bi bi-search" style="font-size: 1.2rem;"></i>
+        </div>
+        <div class="nav-item me-3">
+          <i class="bi bi-person" style="font-size: 1.2rem;"></i>
+        </div>
+        <div class="nav-item" onclick="openCart()" style="cursor: pointer;">
+          <i class="bi bi-bag" style="font-size: 1.2rem;"></i>
+          <span class="cart-badge" id="cartBadge">0</span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid feedback-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="feedback-content">
+                    <h1 class="text-center mb-4 fw-bold text-dark">We Value Your Feedback</h1>
+                    <p class="lead text-center mb-5">Help us make your experience even better! We'd love to hear about your experience with Pascal Jewellery, our products, and our service.</p>
+  
+                    <form id="feedbackForm">
+                        
+                        <div class="form-row">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Your Name</label>
+                                <input type="text" class="form-control" id="name" name="name">
+                                <span class="error-message" id="nameError"></span>
+                            </div>
+  
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" class="form-control" id="email" name="email">
+                                <span class="error-message" id="emailError"></span>
+                            </div>
+                        </div>
+  
+                        <div class="form-row">
+                            <div class="mb-3">
+                                <label for="feedbackType" class="form-label">Type of Feedback</label>
+                                <select class="form-select" id="feedbackType" name="feedbackType">
+                                    <option value="general">General Inquiry</option>
+                                    <option value="product">Product Quality</option>
+                                    <option value="service">Customer Service</option>
+                                    <option value="website">Website Experience</option>
+                                    <option value="suggestion">Suggestion</option>
+                                </select>
+                            </div>
+  
+                            <div class="mb-4">
+                                <label class="form-label d-block">Overall Rating</label>
+                                <div class="star-rating" id="starRating">
+                                    <i class="far fa-star" data-rating="1"></i>
+                                    <i class="far fa-star" data-rating="2"></i>
+                                    <i class="far fa-star" data-rating="3"></i>
+                                    <i class="far fa-star" data-rating="4"></i>
+                                    <i class="far fa-star" data-rating="5"></i>
+                                </div>
+                                <input type="hidden" id="rating" name="rating" value="0">
+                                <span class="error-message" id="ratingError"></span>
+                            </div>
+                        </div>
+  
+                        <div class="mb-4">
+                            <label for="comments" class="form-label">Your Feedback / Comments</label>
+                            <textarea class="form-control" id="comments" name="comments" rows="5"></textarea>
+                            <span class="error-message" id="commentsError"></span>
+                        </div>
+  
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-dark btn-lg">Submit Feedback</button>
+                        </div>
+                    </form>
+  
+                    <p class="text-center mt-4 text-muted">Thank you for taking the time to provide your feedback!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  
+  <!-- Testimonials Section -->
+  <div class="container-fluid testimonial-section">
+    <div class="container">
+        <h2 class="text-center mb-5 fw-bold">What Our Customers Say</h2>
+        
+        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="testimonial-card">
+                                <img src="https://i.pravatar.cc/150?img=1" alt="Customer" class="testimonial-img">
+                                <span class="testimonial-category">Product Quality</span>
+                                <div class="testimonial-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p class="mb-3">"The quality of the diamond ring I purchased is exceptional. The craftsmanship is truly outstanding and exceeded my expectations!"</p>
+                                <h6 class="fw-bold">Sarah Johnson</h6>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="testimonial-card">
+                                <img src="https://i.pravatar.cc/150?img=12" alt="Customer" class="testimonial-img">
+                                <span class="testimonial-category">Customer Service</span>
+                                <div class="testimonial-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p class="mb-3">"The staff was incredibly helpful and patient. They helped me find the perfect anniversary gift for my wife. Highly recommended!"</p>
+                                <h6 class="fw-bold">Michael Chen</h6>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="testimonial-card">
+                                <img src="https://i.pravatar.cc/150?img=5" alt="Customer" class="testimonial-img">
+                                <span class="testimonial-category">Website Experience</span>
+                                <div class="testimonial-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <p class="mb-3">"Easy to navigate website with beautiful product photos. The online shopping experience was seamless and delivery was prompt."</p>
+                                <h6 class="fw-bold">Emily Rodriguez</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="carousel-item">
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="testimonial-card">
+                                <img src="https://i.pravatar.cc/150?img=8" alt="Customer" class="testimonial-img">
+                                <span class="testimonial-category">Product Quality</span>
+                                <div class="testimonial-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p class="mb-3">"Purchased a gold necklace and it's absolutely stunning! The attention to detail is remarkable. Worth every penny!"</p>
+                                <h6 class="fw-bold">David Thompson</h6>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="testimonial-card">
+                                <img src="https://i.pravatar.cc/150?img=9" alt="Customer" class="testimonial-img">
+                                <span class="testimonial-category">Customer Service</span>
+                                <div class="testimonial-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p class="mb-3">"The team went above and beyond to customize my engagement ring. Their dedication to customer satisfaction is unmatched!"</p>
+                                <h6 class="fw-bold">Jessica Brown</h6>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="testimonial-card">
+                                <img src="https://i.pravatar.cc/150?img=15" alt="Customer" class="testimonial-img">
+                                <span class="testimonial-category">Suggestion</span>
+                                <div class="testimonial-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <p class="mb-3">"Love the collection! Would be great to see more contemporary designs. Overall, a fantastic jewellery store!"</p>
+                                <h6 class="fw-bold">Robert Martinez</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+  </div>
+  
+
+  <!-- Search Modal -->
+  <div class="search-modal" id="searchModal">
+    <div class="search-content">
+      <button class="search-close" onclick="closeSearch()">&times;</button>
+      <h4 class="mb-4" style="font-size: 1.5rem;">Search Products</h4>
+      <div class="search-input-wrapper">
+        <input type="text" class="search-input" id="searchInput" placeholder="Search for jewelry..." autocomplete="off">
+        <i class="bi bi-search search-icon"></i>
+      </div>
+      <div class="search-results" id="searchResults"></div>
+    </div>
+  </div>
+
+  
+
+  <!-- Offcanvas Cart -->
+  <div class="offcanvas offcanvas-end offcanvas-cart" tabindex="-1" id="cartOffcanvas" aria-labelledby="cartOffcanvasLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="cartOffcanvasLabel" style="font-size: 1.4rem;">Shopping Cart</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div id="cartItems"></div>
+      <div class="cart-total" id="cartTotal" style="display: none;">
+        <div class="d-flex justify-content-between mb-2">
+          <span>Subtotal:</span>
+          <span class="fw-bold" id="subtotalAmount">$0</span>
+        </div>
+        <div class="d-flex justify-content-between mb-2">
+          <span>Shipping:</span>
+          <span class="fw-bold">Free</span>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between">
+          <span class="fw-bold">Total:</span>
+          <span class="fw-bold" id="totalAmount">$0</span>
+        </div>
+        <button class="checkout-btn">Proceed to Checkout</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-white text-dark border-top mt-5 pt-4 pb-2">
+    <div class="container">
+      <div class="row text-center text-md-start">
+        <div class="col-md-4 mb-4">
+          <h5 class="fw-bold" style="font-size: 1.3rem;">Pascal</h5>
+          <p class="mb-2" style="font-size: 1.05rem;">Elegance redefined.</p>
+          <div>
+            <a href="#" class="text-dark me-3"><i class="bi bi-instagram" style="font-size: 1.3rem;"></i></a>
+            <a href="#" class="text-dark me-3"><i class="bi bi-facebook" style="font-size: 1.3rem;"></i></a>
+            <a href="#" class="text-dark me-3"><i class="bi bi-whatsapp" style="font-size: 1.3rem;"></i></a>
+            <a href="#" class="text-dark"><i class="bi bi-pinterest" style="font-size: 1.3rem;"></i></a>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <h6 class="fw-bold" style="font-size: 1.15rem;">Quick Links</h6>
+          <ul class="list-unstyled" style="font-size: 1.05rem;">
+            <li><a href="index.html" class="text-dark text-decoration-none">Home</a></li>
+            <li><a href="categories.html" class="text-dark text-decoration-none">Categories</a></li>
+            <li><a href="comparison.html" class="text-dark text-decoration-none">Comparison</a></li>
+            <li><a href="gallery.html" class="text-dark text-decoration-none">Gallery</a></li>
+            <li><a href="contact.html" class="text-dark text-decoration-none">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-4">
+          <h6 class="fw-bold" style="font-size: 1.15rem;">Contact Us</h6>
+          <p class="mb-1" style="font-size: 1.05rem;"><i class="bi bi-whatsapp"></i> +92 335 5562218</p>
+          <p class="mb-1" style="font-size: 1.05rem;"><i class="bi bi-envelope"></i> pascaljewels@gmail.com</p>
+          <p style="font-size: 1.05rem;"><i class="bi bi-geo-alt"></i> Karachi, Pakistan</p>
+        </div>
+      </div>
+      <div class="text-center border-top pt-3" style="font-size: 15px;">
+        &copy; 2025 Pascal Imitation Jewellery. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="script.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.32/dist/sweetalert2.all.min.js"></script>
+<script>
+    // Star Rating Functionality
+    const stars = document.querySelectorAll('.star-rating i');
+    const ratingInput = document.getElementById('rating');
+    
+    stars.forEach((star, index) => {
+        star.addEventListener('click', () => {
+            const rating = star.getAttribute('data-rating');
+            ratingInput.value = rating;
+            
+            stars.forEach((s, i) => {
+                if (i < rating) {
+                    s.classList.remove('far');
+                    s.classList.add('fas', 'active');
+                } else {
+                    s.classList.remove('fas', 'active');
+                    s.classList.add('far');
+                }
+            });
+        });
+        
+        star.addEventListener('mouseenter', () => {
+            const rating = star.getAttribute('data-rating');
+            stars.forEach((s, i) => {
+                if (i < rating) {
+                    s.classList.add('active');
+                }
+            });
+        });
+    });
+    
+    document.querySelector('.star-rating').addEventListener('mouseleave', () => {
+        const currentRating = ratingInput.value;
+        stars.forEach((s, i) => {
+            if (i < currentRating) {
+                s.classList.add('active');
+            } else {
+                s.classList.remove('active');
+            }
+        });
+    });
+    
+    // Form Validation
+    const form = document.getElementById('feedbackForm');
+    
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        // Clear previous errors
+        document.querySelectorAll('.error-message').forEach(msg => msg.textContent = '');
+        
+        let isValid = true;
+        
+        // Name validation (only letters and spaces)
+        const name = document.getElementById('name').value.trim();
+        const nameRegex = /^[A-Za-z\s]+$/;
+        if (!name) {
+            document.getElementById('nameError').textContent = 'Name is required';
+            isValid = false;
+        } else if (!nameRegex.test(name)) {
+            document.getElementById('nameError').textContent = 'Name should contain only letters and spaces';
+            isValid = false;
+        }
+        
+        // Email validation
+        const email = document.getElementById('email').value.trim();
+        const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,3}$/;
+        if (!email) {
+            document.getElementById('emailError').textContent = 'Email is required';
+            isValid = false;
+        } else if (!emailRegex.test(email)) {
+            document.getElementById('emailError').textContent = 'Please enter a valid email address';
+            isValid = false;
+        }
+        
+        // Rating validation
+        const rating = document.getElementById('rating').value;
+        if (rating == '0') {
+            document.getElementById('ratingError').textContent = 'Please select a rating';
+            isValid = false;
+        }
+        
+        // Comments validation
+        const comments = document.getElementById('comments').value.trim();
+        if (!comments) {
+            document.getElementById('commentsError').textContent = 'Feedback is required';
+            isValid = false;
+        } else if (comments.length < 10) {
+            document.getElementById('commentsError').textContent = 'Feedback should be at least 10 characters long';
+            isValid = false;
+        }
+        
+        // If valid, show success message
+        if (isValid) {
+            Swal.fire({
+                icon: 'success',
+                title: 'Thank You!',
+                text: 'Your feedback has been submitted successfully. We appreciate your time!',
+                confirmButtonColor: '#343a40',
+                confirmButtonText: 'Close'
+            }).then(() => {
+                form.reset();
+                ratingInput.value = '0';
+                stars.forEach(s => {
+                    s.classList.remove('fas', 'active');
+                    s.classList.add('far');
+                });
+            });
+        }
+    });
+</script>
+</body>
+
+</html>
